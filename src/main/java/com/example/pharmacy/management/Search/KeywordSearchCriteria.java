@@ -10,6 +10,7 @@ public class KeywordSearchCriteria implements MedicineSearchCriteria {
         this.keyword = keyword;
     }
 
+    
 
     public String getkeyword() {
         return keyword;
