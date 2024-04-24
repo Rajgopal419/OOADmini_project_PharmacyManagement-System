@@ -9,12 +9,12 @@ import com.example.pharmacy.management.model.Medicine;
 public class CreateMedicineCommand implements Command {
     private MedicineServices medicineService;
     private Medicine medicine;
-
+ 
     @Autowired
     public CreateMedicineCommand(MedicineServices medicineService) {
         this.medicineService = medicineService;
 
-    }
+    } 
 
     // Setter method to set the medicine
     public void setMedicine(Medicine medicine) {
