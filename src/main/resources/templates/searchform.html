@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>Search</title>
+</head>
+<body>
+<h2>Search</h2>
+<form th:action="@{/search}" method="get">
+  <input type="text" name="keyword" placeholder="Enter keyword">
+  <button type="submit">Search</button>
+</form>
+</body>
+</html>

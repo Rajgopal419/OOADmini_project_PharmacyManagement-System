@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.2/cosmo/bootstrap.min.css" />
+</head>
+
+<body>
+<div>
+    <div class="container">
+        <table class="table">
+            <thead class="thead-dark">
+            <tr>
+                <th>Medicine ID</th>
+                <th>Medicine Name</th>
+                <th>Date of Manufacture</th>
+                <th>Price</th>
+                <th>Edit</th>
+                <th>Delete</th>
+            </tr>
+            </thead>
+            <tbody>
+
+            <tr th:each="medicine : ${searchResultsIterator}">
+                <td th:text="${medicine.id}">Medicine ID</td>
+                <td th:text="${medicine.medicineName}">Medicine Name</td>
+                <td th:text="${medicine.dateOfManufacture}">Date of Manufacture</td>
+                <td th:text="${medicine.price}">Price</td>
+                <td>
+                    <a th:href="@{/edit/} + ${medicine.id}">Edit</a>
+                </td>
+                <td>
+                    <a th:href="@{/delete/} + ${medicine.id}">Delete</a>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<h2><a th:href="@{/}">Home</a></h2>
+</body>
+
+</html>
